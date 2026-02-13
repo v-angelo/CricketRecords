@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Records</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- favicon -->
+    <link rel="icon" href="./img/favicon.ico" />
+  </head>
+
+  <body class="min-h-screen dark:bg-slate-950 bg-slate-50 dark:text-white">
+    <!-- header -->
+    <header class="bg-purple-600 dark:bg-purple-950">
+      <!-- navbar -->
+      <nav
+        class="flex flex-row md:max-w-2/3 mx-auto px-3 py-2 h-18 justify-between"
+      >
+        <!-- logo and title -->
+        <div class="flex">
+          <img class="h-full" src="./img/logo.png" alt="logo" />
+          <h3 class="flex items-center justify-center text-2xl font-semibold">
+            Cricket Records
+          </h3>
+        </div>
+        <!-- dark/light toggle -->
+        <section
+          class="flex justify-evenly items-center text-2xl font-semibold gap-4"
+        >
+          <div class="text-amber-600">
+            <span class="sun"><i class="fa-regular fa-sun"></i></span>
+            <span class="moon"><i class="fa-regular fa-moon"></i></span>
+          </div>
+          <!-- login -->
+          <div>Login</div>
+        </section>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- heading -->
+      <section>
+        <h1 class="text-4xl md:text-5xl text-center font-bold my-10">
+          Cricket: Hall of Fame
+        </h1>
+      </section>
+      <!-- images -->
+      <section
+        class="flex flex-col md:flex-row gap-10 md:max-w-2/3 mx-auto items-center justify-center"
+      >
+        <!-- test -->
+        <a
+          href="./html/test.html"
+          target="_blank"
+          class="w-70 flex flex-col justify-center items-center mx-auto border-2 rounded-3xl transform transition-transform hover:scale-110 duration-150 ease-in-out cursor-pointer"
+        >
+          <figure class="mx-5 mt-5">
+            <img src="./img/test.jpg" alt="testImg" />
+          </figure>
+          <h2 class="text-3xl font-semibold my-2">TEST</h2>
+        </a>
+        <!-- odi -->
+        <a
+          href="./html/test.html"
+          target="_blank"
+          class="w-70 flex flex-col justify-center items-center mx-auto border-2 rounded-3xl transform transition-transform hover:scale-110 duration-150 ease-in-out cursor-pointer"
+        >
+          <figure class="mx-5 mt-5">
+            <img src="./img/odi.jpg" alt="testImg" />
+          </figure>
+          <h2 class="text-3xl font-semibold my-2">ODI</h2>
+        </a>
+        <!-- t20  -->
+        <a
+          href="./html/test.html"
+          target="_blank"
+          class="w-70 flex flex-col justify-center items-center mx-auto border-2 rounded-3xl transform transition-transform hover:scale-110 duration-150 ease-in-out cursor-pointer"
+        >
+          <figure class="mx-5 mt-5">
+            <img src="./img/t20.jpg" alt="testImg" />
+          </figure>
+          <h2 class="text-3xl font-semibold my-2">T20</h2>
+        </a>
+      </section>
+    </main>
+  </body>
+  <!-- fontawesome cdn -->
+  <script
+    src="https://kit.fontawesome.com/7e59fb41a7.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Light/Dark Theme JS -->
+  <script src="./js/theme.js"></script>
+</html>
