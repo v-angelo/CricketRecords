@@ -1,9 +1,124 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Records</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- favicon -->
+    <link rel="icon" href="../img/favicon.ico" />
   </head>
-  <body></body>
+
+  <body
+    id="mainPage"
+    class="min-h-screen dark:bg-slate-950 bg-slate-50 dark:text-white"
+  >
+    <!-- header -->
+    <header class="bg-purple-600 dark:bg-purple-950 sticky top-0 z-10">
+      <!-- navbar -->
+      <nav
+        class="flex flex-row md:max-w-2/3 mx-auto px-3 py-2 h-18 justify-between"
+      >
+        <!-- logo and title -->
+        <a class="w-60 flex hover:opacity-90" href="../index.html">
+          <img class="h-full" src="../img/logo.png" alt="logo" />
+          <h3 class="flex items-center justify-center text-2xl font-semibold">
+            Cricket Records
+          </h3>
+        </a>
+        <!-- dark/light toggle -->
+        <section
+          class="flex justify-evenly items-center text-2xl font-semibold gap-4"
+        >
+          <div class="text-amber-500 hover:text-amber-600 cursor-pointer">
+            <span class="sun"><i class="fa-regular fa-sun"></i></span>
+            <span class="moon"><i class="fa-regular fa-moon"></i></span>
+          </div>
+          <!-- login -->
+          <span class="cursor-pointer hover:opacity-90">Login</span>
+        </section>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- heading -->
+      <section>
+        <h1 class="text-4xl md:text-5xl text-center font-bold my-10">
+          Test Records
+        </h1>
+        <h2 class="text-2xl font-semibold sm:ml-5 mb-3">
+          Best Batting Records
+        </h2>
+      </section>
+
+      <!-- table -->
+      <table class="table-auto border sm:ml-5" id="table">
+        <thead>
+          <tr>
+            <th>
+              <div class="relative group inline-block">
+                <button
+                  class="cursor-pointer px-4 py-2 dark:bg-purple-950 bg-purple-600"
+                >
+                  Player
+                </button>
+
+                <div
+                  class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 bg-black text-white text-sm px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none whitespace-nowrap"
+                >
+                  This works ✅
+                </div>
+                <div class="triangle-down w-5 h-5 bg-purple-950"></div>
+              </div>
+            </th>
+            <th>
+              <div class="relative inline-block">
+                <button class="px-4 py-2 bg-gray-200 rounded">Menu</button>
+                <div
+                  class="absolute left-1/2 -translate-x-1/2 mt-1 w-0 h-0 border-l-6 border-r-6 border-t-8 border-l-transparent border-r-transparent border-t-gray-200"
+                ></div>
+              </div>
+            </th>
+            <th>Mat</th>
+            <th>Inn</th>
+            <th>Runs</th>
+            <th>NO</th>
+            <th>HS</th>
+            <th>Avg</th>
+            <th>BF</th>
+            <th>SR</th>
+            <th>100s</th>
+            <th>50s</th>
+            <th>0s</th>
+            <th>4s</th>
+            <th>6s</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="cursor-pointer hover:bg-amber-500">
+            <td class="p-3 border">John</td>
+            <td class="p-3 border">25</td>
+          </tr>
+          <tr class="cursor-pointer hover:bg-amber-500">
+            <td class="p-3 border">Jane</td>
+            <td class="p-3 border">30</td>
+          </tr>
+          <tr class="cursor-pointer hover:bg-amber-500">
+            <td class="p-3 border">Mike</td>
+            <td class="p-3 border">28</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+  <!-- fontawesome cdn -->
+  <script
+    src="https://kit.fontawesome.com/7e59fb41a7.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Light/Dark Theme JS -->
+  <script src="../js/theme.js"></script>
 </html>

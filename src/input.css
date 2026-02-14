@@ -1,3 +1,9 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  .triangle-down {
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+}
