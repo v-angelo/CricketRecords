@@ -6,4 +6,7 @@
   .triangle-down {
     clip-path: polygon(50% 100%, 0 0, 100% 0);
   }
+  .hoverTable {
+    @apply absolute left-1/2 -translate-x-1/2 bottom-11 mb-2 dark:bg-purple-950 bg-purple-600 text-white text-sm px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none whitespace-nowrap
+  }
 }
