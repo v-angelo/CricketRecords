@@ -18,7 +18,7 @@
     <header class="bg-purple-600 dark:bg-purple-950 sticky top-0 z-10">
       <!-- navbar -->
       <nav
-        class="flex flex-row md:max-w-2/3 mx-auto px-3 py-2 h-18 justify-between"
+        class="flex flex-row lg:max-w-5xl mx-auto px-3 py-2 h-18 justify-between"
       >
         <!-- logo and title -->
         <a class="w-60 flex hover:opacity-90" href="../index.html">
@@ -44,73 +44,376 @@
     <!-- main -->
     <main>
       <!-- heading -->
-      <section>
-        <h1 class="text-4xl md:text-5xl text-center font-bold my-10">
-          Test Records
-        </h1>
-        <h2 class="text-2xl font-semibold sm:ml-5 mb-3">
-          Best Batting Records
-        </h2>
-      </section>
+      <h1 class="text-4xl md:text-5xl text-center font-bold my-5">
+        Test Records
+      </h1>
 
-      <!-- table -->
-      <table class="table-auto border sm:ml-5" id="table">
-        <thead>
-          <tr>
-            <th>
-              <!-- column01 - Player -->
-              <div class="relative group inline-block">
-                <button
-                  class="cursor-pointer px-4 py-2 dark:bg-purple-950 bg-purple-600"
-                >
-                  Player
-                </button>
-                <div class="hoverTable">Player Name</div>
-                <div class="triangle-down hoverTable bottom-8.5 w-4 h-"></div>
-              </div>
-            </th>
-            <th>
-              <!-- column02 - Matches -->
-              <div class="relative group inline-block">
-                <button
-                  class="cursor-pointer px-4 py-2 dark:bg-purple-950 bg-purple-600"
-                >
-                  Mat
-                </button>
-                <div class="hoverTable">Total Matches</div>
-                <div class="triangle-down hoverTable bottom-8.5 w-4 h-"></div>
-              </div>
-            </th>
-            <th>Mat</th>
-            <th>Inn</th>
-            <th>Runs</th>
-            <th>NO</th>
-            <th>HS</th>
-            <th>Avg</th>
-            <th>BF</th>
-            <th>SR</th>
-            <th>100s</th>
-            <th>50s</th>
-            <th>0s</th>
-            <th>4s</th>
-            <th>6s</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="cursor-pointer hover:bg-amber-500">
-            <td class="p-3 border">John</td>
-            <td class="p-3 border">25</td>
-          </tr>
-          <tr class="cursor-pointer hover:bg-amber-500">
-            <td class="p-3 border">Jane</td>
-            <td class="p-3 border">30</td>
-          </tr>
-          <tr class="cursor-pointer hover:bg-amber-500">
-            <td class="p-3 border">Mike</td>
-            <td class="p-3 border">28</td>
-          </tr>
-        </tbody>
-      </table>
+      <section class="w-9/10 mx-auto overflow-x-auto pt-2 text-center">
+        <div
+          class="border dark:border-white/40 border-black/15 rounded-t-3xl inline-block text-left"
+        >
+          <!-- table -->
+          <table class="table-auto whitespace-nowrap" id="testBattingTable">
+            <caption
+              class="text-left text-xl font-semibold caption-top py-2 pl-2"
+            >
+              Top Batting Records
+            </caption>
+            <thead>
+              <tr>
+                <!-- column01 - ID -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      #
+                    </button>
+                    <div class="hoverTable">Ranking</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column02 - Player -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer text-left w-full pl-2 py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      Player
+                    </button>
+                    <div class="hoverTable">Player Name</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column03 - Country -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      Nat
+                    </button>
+                    <div class="hoverTable">Nationality</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column04 - Career -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      Career
+                    </button>
+                    <div class="hoverTable">Total Active Years</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column05 - Matches -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      Mat
+                    </button>
+                    <div class="hoverTable">Total Matches</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column06 - Innings -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      Inn
+                    </button>
+                    <div class="hoverTable">Total Innings</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column07 - Runs -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      Runs
+                    </button>
+                    <div class="hoverTable">Total Runs Scored</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column08 - Not Outs -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      NO
+                    </button>
+                    <div class="hoverTable">Total Not Outs</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column09 - Highest Score -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      HS
+                    </button>
+                    <div class="hoverTable">Highest Score</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column10 - Average -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      Avg
+                    </button>
+                    <div class="hoverTable">Total Average</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column11 - Balls Faced -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      BF
+                    </button>
+                    <div class="hoverTable">Total Balls Faced</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column12 - Strike Rate -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      SR
+                    </button>
+                    <div class="hoverTable">Strike Rate</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column13 - Innings -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      100s
+                    </button>
+                    <div class="hoverTable">Total Centuries</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column14 - Innings -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      50s
+                    </button>
+                    <div class="hoverTable">Total Half-Centuries</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column15 - Ducks -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      0s
+                    </button>
+                    <div class="hoverTable">Total Ducks</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column16 - Fours -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      4s
+                    </button>
+                    <div class="hoverTable">Total Fours</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+                <!-- column17 - Sixes -->
+                <th>
+                  <div class="relative group">
+                    <button
+                      class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
+                    >
+                      6s
+                    </button>
+                    <div class="hoverTable">Total Sixes</div>
+                    <div
+                      class="triangle-down hoverTable bottom-8.5 w-4 h-4"
+                    ></div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row01 -->
+              <tr class="cursor-pointer hover:bg-amber-500 active:bg-amber-600">
+                <td>1</td>
+                <td>Sachin Tendulkar</td>
+                <td>IND</td>
+                <td>1989-2013</td>
+                <td>200</td>
+                <td>329</td>
+                <td>15921</td>
+                <td>33</td>
+                <td>248*</td>
+                <td>53.78</td>
+                <td>29437+</td>
+                <td>54.04</td>
+                <td>51</td>
+                <td>68</td>
+                <td>14</td>
+                <td>2058+</td>
+                <td>69</td>
+              </tr>
+              <!-- Row02 -->
+              <tr
+                class="border-t dark:border-white/15 border-black/15 cursor-pointer hover:bg-amber-500 active:bg-amber-600"
+              >
+                <td>2</td>
+                <td>Joe Root</td>
+                <td>ENG</td>
+                <td>2012-2026</td>
+                <td>163</td>
+                <td>298</td>
+                <td>13943</td>
+                <td>25</td>
+                <td>262</td>
+                <td>51.07</td>
+                <td>24242</td>
+                <td>57.51</td>
+                <td>41</td>
+                <td>66</td>
+                <td>15</td>
+                <td>1492</td>
+                <td>46</td>
+              </tr>
+              <!-- Row03 -->
+              <tr
+                class="border-t dark:border-white/15 border-black/15 cursor-pointer hover:bg-amber-500 active:bg-amber-600"
+              >
+                <td>3</td>
+                <td>Ricky Ponting</td>
+                <td>AUS</td>
+                <td>1995-2012</td>
+                <td>168</td>
+                <td>287</td>
+                <td>13378</td>
+                <td>29</td>
+                <td>257</td>
+                <td>51.85</td>
+                <td>22782</td>
+                <td>58.72</td>
+                <td>41</td>
+                <td>62</td>
+                <td>17</td>
+                <td>1509</td>
+                <td>73</td>
+              </tr>
+              <!-- Row03 -->
+              <tr
+                class="border-t dark:border-white/15 border-black/15 cursor-pointer hover:bg-amber-500 active:bg-amber-600"
+              >
+                <td>4</td>
+                <td>Jacques Kallis</td>
+                <td>SA</td>
+                <td>1995-2013</td>
+                <td>166</td>
+                <td>280</td>
+                <td>13289</td>
+                <td>40</td>
+                <td>224</td>
+                <td>55.37</td>
+                <td>28903</td>
+                <td>45.97</td>
+                <td>45</td>
+                <td>58</td>
+                <td>16</td>
+                <td>1488</td>
+                <td>97</td>
+              </tr>
+              <!-- Row03 -->
+              <tr
+                class="border-t dark:border-white/15 border-black/15 cursor-pointer hover:bg-amber-500 active:bg-amber-600"
+              >
+                <td>5</td>
+                <td>Rahul Dravid</td>
+                <td>IND</td>
+                <td>1996-2012</td>
+                <td>164</td>
+                <td>286</td>
+                <td>13288</td>
+                <td>32</td>
+                <td>270</td>
+                <td>52.31</td>
+                <td>31258</td>
+                <td>42.51</td>
+                <td>36</td>
+                <td>63</td>
+                <td>8</td>
+                <td>1654</td>
+                <td>21</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
   </body>
   <!-- fontawesome cdn -->
@@ -121,4 +424,5 @@
 
   <!-- Light/Dark Theme JS -->
   <script src="../js/theme.js"></script>
+  <script src="../js/sort.js"></script>
 </html>
