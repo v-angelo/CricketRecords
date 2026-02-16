@@ -10,17 +10,30 @@ testBatTable.addEventListener("click", function (e) {
     row.classList.add("selected");
 });
 
+document.addEventListener("click", function(e) {
+    if(!testBatTable.contains(e.target)) {
+        testBatTable.querySelectorAll("tr").forEach(row => row.classList.remove("selected"));
+    }
+});
+
 // sorting
 const tbody = testBatTable.querySelector("tbody");
 const sortDirection = {};
 
 testBatTable.querySelectorAll("th button").forEach(button => {
     button.addEventListener("click", function () {
+        testBatTable.querySelectorAll("th button").forEach(b => {
+            b.textContent = b.textContent.replace(/["▲""▼"]/g, "");
+            // console.log(b.textContent);
+        });
+
         // find parent th
         const th = this.closest("th");
 
         // get column index
         const columnIndex = th.cellIndex;
+
+        if(columnIndex==0) return;
 
         // Toggle direction
         sortDirection[columnIndex] = !sortDirection[columnIndex];
@@ -41,7 +54,7 @@ testBatTable.querySelectorAll("th button").forEach(button => {
                 return ascending ? numA - numB : numB - numA;
             }
 
-            return ascending? cellA.localeCompare(cellB): cellB.localeCompare(cellA);
+            return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
         });
 
         this.textContent = this.textContent.replace(/["▲""▼"]/g, "");
