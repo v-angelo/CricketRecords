@@ -10,8 +10,8 @@ testBatTable.addEventListener("click", function (e) {
     row.classList.add("selected");
 });
 
-document.addEventListener("click", function(e) {
-    if(!testBatTable.contains(e.target)) {
+document.addEventListener("click", function (e) {
+    if (!testBatTable.contains(e.target)) {
         testBatTable.querySelectorAll("tr").forEach(row => row.classList.remove("selected"));
     }
 });
@@ -22,18 +22,25 @@ const sortDirection = {};
 
 testBatTable.querySelectorAll("th button").forEach(button => {
     button.addEventListener("click", function () {
-        testBatTable.querySelectorAll("th button").forEach(b => {
-            b.textContent = b.textContent.replace(/["▲""▼"]/g, "");
-            // console.log(b.textContent);
-        });
-
         // find parent th
         const th = this.closest("th");
 
         // get column index
         const columnIndex = th.cellIndex;
 
-        if(columnIndex==0) return;
+        if (columnIndex == 0) return;
+
+        // removing sort icons
+        testBatTable.querySelectorAll("th button").forEach(b => {
+            b.textContent = b.textContent.replace(/["▲""▼"]/g, "");
+        });
+
+        // removing column highlight
+        testBatTable.querySelectorAll("td").forEach(data => {
+            if(data.classList.contains("font-bold")) {
+                data.classList.remove("font-bold");
+            }
+        });
 
         // Toggle direction
         sortDirection[columnIndex] = !sortDirection[columnIndex];
@@ -62,5 +69,16 @@ testBatTable.querySelectorAll("th button").forEach(button => {
 
         // re-writing rows
         rows.forEach(row => tbody.appendChild(row));
+
+        // re-building first index column
+        rows.forEach((row, index) => {
+            row.children[0].textContent = index + 1;
+        });
+
+        // Sort column highlight
+        rows.forEach((row) => {
+            row.children[columnIndex].classList.add("font-bold");
+        });
+    
     });
 });
