@@ -48,11 +48,14 @@
         Test Records
       </h1>
 
-      <section class="w-9/10 mx-auto overflow-x-auto pt-2 text-center">
-        <div
+      <!-- batting section -->
+      <section
+        class="w-9/10 lg:max-w-5xl mx-auto overflow-x-auto pt-2 text-center"
+      >
+        <!-- batting table -->
+        <article
           class="border dark:border-white/40 border-black/15 rounded-t-3xl inline-block text-left"
         >
-          <!-- table -->
           <table class="table-auto whitespace-nowrap" id="testBattingTable">
             <caption
               class="text-left text-xl font-semibold caption-top py-2 pl-2"
@@ -412,7 +415,228 @@
               </tr>
             </tbody>
           </table>
-        </div>
+        </article>
+      </section>
+
+      <!-- editing section -->
+      <section class="w-9/10 lg:max-w-225 mx-auto">
+        <!-- editing buttons -->
+        <article class="w-full flex justify-evenly my-5">
+          <button
+            id="addButton"
+            class="bg-green-500 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
+          >
+            Add
+          </button>
+          <button
+            class="bg-yellow-500 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
+          >
+            Modify
+          </button>
+          <button
+            class="bg-red-600 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
+          >
+            Delete
+          </button>
+        </article>
+
+        <!-- editing form -->
+        <form
+          class="px-1 py-2 my-7 w-full hidden flex-wrap items-center justify-center lg:gap-x-30 border dark:border-white/40 border-black/15 rounded-xl"
+          id="testBatForm"
+        >
+          <div class="m-2 flex justify-between w-75">
+            <!-- player -->
+            <label class="text-lg" for="player">Player: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Player Name"
+              required
+            />
+          </div>
+          <div class="m-2 flex justify-between w-75">
+            <!-- country -->
+            <label class="text-lg" for="player">Nationality: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Nationality"
+              required
+            />
+          </div>
+          <div class="m-2 flex justify-between w-75">
+            <!-- career -->
+            <label class="text-lg" for="player">Career: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Active Years"
+              required
+            />
+          </div>
+          <!-- matches -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Matches: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Total Matches"
+              required
+            />
+          </div>
+          <!-- innings -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Innings: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Total Innings"
+              required
+            />
+          </div>
+          <!-- runs -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Runs: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Total Runs"
+              required
+            />
+          </div>
+          <!-- not outs -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Not Outs: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Total Not Outs"
+              required
+            />
+          </div>
+          <!-- higest score -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Highest: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Highest Score"
+              required
+            />
+          </div>
+          <!-- average -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Average: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Average Score"
+              required
+            />
+          </div>
+          <!-- balls faced -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Balls Faced: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Balls Faced"
+              required
+            />
+          </div>
+          <!-- strike rate -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Stike Rate: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Strike Rate"
+              required
+            />
+          </div>
+          <!-- 100s -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Centuries: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Centuries"
+              required
+            />
+          </div>
+          <!-- 50s -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Half-Cen: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Half-Centuries"
+              required
+            />
+          </div>
+          <!-- ducks -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Ducks: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Total Ducks"
+              required
+            />
+          </div>
+          <!-- 4s -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Fours: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Total Fours"
+              required
+            />
+          </div>
+          <!-- 6s -->
+          <div class="m-2 flex justify-between w-75">
+            <label class="text-lg" for="player">Sixes: </label>
+            <input
+              class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
+              type="text"
+              id="player"
+              placeholder="Total Sixes"
+              required
+            />
+          </div>
+          <button
+            class="bg-purple-600 dark:bg-purple-950 sm:mx-30 mx-5 mt-5 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
+          >
+            Cancel
+          </button>
+          <button
+            class="bg-purple-600 dark:bg-purple-950 sm:mx-30 mx-5 mt-5 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
+          >
+            Reset
+          </button>
+          <button
+            class="bg-amber-500 dark:bg-amber-600 sm:mx-30 mx-5 mt-5 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
+          >
+            Submit
+          </button>
+        </form>
       </section>
     </main>
   </body>
@@ -425,4 +649,5 @@
   <!-- Light/Dark Theme JS -->
   <script src="../js/theme.js"></script>
   <script src="../js/sort.js"></script>
+  <script src="../js/crud.js"></script>
 </html>

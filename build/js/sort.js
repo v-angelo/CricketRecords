@@ -1,22 +1,5 @@
-// Select table row
-const testBatTable = document.querySelector("#testBattingTable");
-
-testBatTable.addEventListener("click", function (e) {
-    const row = e.target.closest("tr");
-
-    if (!row || row.rowIndex === 0) return; // ignore header
-
-    document.querySelectorAll("#testBattingTable tr").forEach(r => r.classList.remove("selected"));
-    row.classList.add("selected");
-});
-
-document.addEventListener("click", function (e) {
-    if (!testBatTable.contains(e.target)) {
-        testBatTable.querySelectorAll("tr").forEach(row => row.classList.remove("selected"));
-    }
-});
-
 // sorting
+const testBatTable = document.querySelector("#testBattingTable");
 const tbody = testBatTable.querySelector("tbody");
 const sortDirection = {};
 
