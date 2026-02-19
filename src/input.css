@@ -2,6 +2,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --breakpoint-xs: 25rem;
+}  
+
 @layer components {
   .triangle-down {
     clip-path: polygon(50% 100%, 0 0, 100% 0);
@@ -14,7 +18,7 @@
 
 @layer utilities {
   .selected {
-    @apply bg-amber-300 dark:bg-amber-600
+    @apply bg-amber-300 dark:bg-amber-500
   }
 }
 

@@ -65,7 +65,7 @@
             <thead>
               <tr>
                 <!-- column01 - ID -->
-                <th>
+                <th data-key="">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -79,7 +79,7 @@
                   </div>
                 </th>
                 <!-- column02 - Player -->
-                <th>
+                <th data-key="player">
                   <div class="relative group">
                     <button
                       class="cursor-pointer text-left w-full pl-2 py-2 dark:bg-purple-950 bg-purple-600"
@@ -93,7 +93,7 @@
                   </div>
                 </th>
                 <!-- column03 - Country -->
-                <th>
+                <th data-key="nat">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -107,7 +107,7 @@
                   </div>
                 </th>
                 <!-- column04 - Career -->
-                <th>
+                <th data-key="career">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -121,7 +121,7 @@
                   </div>
                 </th>
                 <!-- column05 - Matches -->
-                <th>
+                <th data-key="mat">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -135,7 +135,7 @@
                   </div>
                 </th>
                 <!-- column06 - Innings -->
-                <th>
+                <th data-key="inns">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -149,7 +149,7 @@
                   </div>
                 </th>
                 <!-- column07 - Runs -->
-                <th>
+                <th data-key="runs">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -163,7 +163,7 @@
                   </div>
                 </th>
                 <!-- column08 - Not Outs -->
-                <th>
+                <th data-key="no">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -177,7 +177,7 @@
                   </div>
                 </th>
                 <!-- column09 - Highest Score -->
-                <th>
+                <th data-key="hs">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -191,7 +191,7 @@
                   </div>
                 </th>
                 <!-- column10 - Average -->
-                <th>
+                <th data-key="ave">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -205,7 +205,7 @@
                   </div>
                 </th>
                 <!-- column11 - Balls Faced -->
-                <th>
+                <th data-key="bf">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -219,7 +219,7 @@
                   </div>
                 </th>
                 <!-- column12 - Strike Rate -->
-                <th>
+                <th data-key="sr">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -232,8 +232,8 @@
                     ></div>
                   </div>
                 </th>
-                <!-- column13 - Innings -->
-                <th>
+                <!-- column13 - 100s -->
+                <th data-key="hundreds">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -247,7 +247,7 @@
                   </div>
                 </th>
                 <!-- column14 - Innings -->
-                <th>
+                <th data-key="fifties">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -261,7 +261,7 @@
                   </div>
                 </th>
                 <!-- column15 - Ducks -->
-                <th>
+                <th data-key="ducks">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -275,7 +275,7 @@
                   </div>
                 </th>
                 <!-- column16 - Fours -->
-                <th>
+                <th data-key="fours">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -289,7 +289,7 @@
                   </div>
                 </th>
                 <!-- column17 - Sixes -->
-                <th>
+                <th data-key="sixes">
                   <div class="relative group">
                     <button
                       class="cursor-pointer w-full py-2 dark:bg-purple-950 bg-purple-600"
@@ -305,114 +305,7 @@
               </tr>
             </thead>
             <tbody>
-              <!-- Row01 -->
-              <tr class="cursor-pointer hover:bg-amber-500 active:bg-amber-600">
-                <td>1</td>
-                <td>Sachin Tendulkar</td>
-                <td>IND</td>
-                <td>1989-2013</td>
-                <td>200</td>
-                <td>329</td>
-                <td>15921</td>
-                <td>33</td>
-                <td>248*</td>
-                <td>53.78</td>
-                <td>29437+</td>
-                <td>54.04</td>
-                <td>51</td>
-                <td>68</td>
-                <td>14</td>
-                <td>2058+</td>
-                <td>69</td>
-              </tr>
-              <!-- Row02 -->
-              <tr
-                class="border-t dark:border-white/15 border-black/15 cursor-pointer hover:bg-amber-500 active:bg-amber-600"
-              >
-                <td>2</td>
-                <td>Joe Root</td>
-                <td>ENG</td>
-                <td>2012-2026</td>
-                <td>163</td>
-                <td>298</td>
-                <td>13943</td>
-                <td>25</td>
-                <td>262</td>
-                <td>51.07</td>
-                <td>24242</td>
-                <td>57.51</td>
-                <td>41</td>
-                <td>66</td>
-                <td>15</td>
-                <td>1492</td>
-                <td>46</td>
-              </tr>
-              <!-- Row03 -->
-              <tr
-                class="border-t dark:border-white/15 border-black/15 cursor-pointer hover:bg-amber-500 active:bg-amber-600"
-              >
-                <td>3</td>
-                <td>Ricky Ponting</td>
-                <td>AUS</td>
-                <td>1995-2012</td>
-                <td>168</td>
-                <td>287</td>
-                <td>13378</td>
-                <td>29</td>
-                <td>257</td>
-                <td>51.85</td>
-                <td>22782</td>
-                <td>58.72</td>
-                <td>41</td>
-                <td>62</td>
-                <td>17</td>
-                <td>1509</td>
-                <td>73</td>
-              </tr>
-              <!-- Row03 -->
-              <tr
-                class="border-t dark:border-white/15 border-black/15 cursor-pointer hover:bg-amber-500 active:bg-amber-600"
-              >
-                <td>4</td>
-                <td>Jacques Kallis</td>
-                <td>SA</td>
-                <td>1995-2013</td>
-                <td>166</td>
-                <td>280</td>
-                <td>13289</td>
-                <td>40</td>
-                <td>224</td>
-                <td>55.37</td>
-                <td>28903</td>
-                <td>45.97</td>
-                <td>45</td>
-                <td>58</td>
-                <td>16</td>
-                <td>1488</td>
-                <td>97</td>
-              </tr>
-              <!-- Row03 -->
-              <tr
-                class="border-t dark:border-white/15 border-black/15 cursor-pointer hover:bg-amber-500 active:bg-amber-600"
-              >
-                <td>5</td>
-                <td>Rahul Dravid</td>
-                <td>IND</td>
-                <td>1996-2012</td>
-                <td>164</td>
-                <td>286</td>
-                <td>13288</td>
-                <td>32</td>
-                <td>270</td>
-                <td>52.31</td>
-                <td>31258</td>
-                <td>42.51</td>
-                <td>36</td>
-                <td>63</td>
-                <td>8</td>
-                <td>1654</td>
-                <td>21</td>
-              </tr>
+              <!-- table data comes here -->
             </tbody>
           </table>
         </article>
@@ -429,214 +322,220 @@
             Add
           </button>
           <button
+            id="modifyButton"
             class="bg-yellow-500 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
           >
             Modify
           </button>
           <button
+            id="deleteButton"
             class="bg-red-600 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
           >
             Delete
           </button>
         </article>
 
-        <!-- editing form -->
+        <!-- add form -->
         <form
           class="px-1 py-2 my-7 w-full hidden flex-wrap items-center justify-center lg:gap-x-30 border dark:border-white/40 border-black/15 rounded-xl"
-          id="testBatForm"
+          id="batForm"
         >
           <div class="m-2 flex justify-between w-75">
             <!-- player -->
-            <label class="text-lg" for="player">Player: </label>
+            <label class="text-lg" for="addPlayer">Player: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formPlayer"
               placeholder="Player Name"
               required
             />
           </div>
           <div class="m-2 flex justify-between w-75">
             <!-- country -->
-            <label class="text-lg" for="player">Nationality: </label>
+            <label class="text-lg" for="addCountry">Nationality: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formCountry"
               placeholder="Nationality"
               required
             />
           </div>
           <div class="m-2 flex justify-between w-75">
             <!-- career -->
-            <label class="text-lg" for="player">Career: </label>
+            <label class="text-lg" for="addCareer">Career: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formCareer"
               placeholder="Active Years"
               required
             />
           </div>
           <!-- matches -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Matches: </label>
+            <label class="text-lg" for="addMatches">Matches: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formMatches"
               placeholder="Total Matches"
               required
             />
           </div>
           <!-- innings -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Innings: </label>
+            <label class="text-lg" for="addInnings">Innings: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formInnings"
               placeholder="Total Innings"
               required
             />
           </div>
           <!-- runs -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Runs: </label>
+            <label class="text-lg" for="addRuns">Runs: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formRuns"
               placeholder="Total Runs"
               required
             />
           </div>
           <!-- not outs -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Not Outs: </label>
+            <label class="text-lg" for="addNO">Not Outs: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formNO"
               placeholder="Total Not Outs"
               required
             />
           </div>
           <!-- higest score -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Highest: </label>
+            <label class="text-lg" for="addHS">Highest: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formHS"
               placeholder="Highest Score"
               required
             />
           </div>
           <!-- average -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Average: </label>
+            <label class="text-lg" for="addAvg">Average: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formAvg"
               placeholder="Average Score"
               required
             />
           </div>
           <!-- balls faced -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Balls Faced: </label>
+            <label class="text-lg" for="addBF">Balls Faced: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formBF"
               placeholder="Balls Faced"
               required
             />
           </div>
           <!-- strike rate -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Stike Rate: </label>
+            <label class="text-lg" for="addSR">Stike Rate: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formSR"
               placeholder="Strike Rate"
               required
             />
           </div>
           <!-- 100s -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Centuries: </label>
+            <label class="text-lg" for="add100">Centuries: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="form100"
               placeholder="Centuries"
               required
             />
           </div>
           <!-- 50s -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Half-Cen: </label>
+            <label class="text-lg" for="add50">Half-Cen: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="form50"
               placeholder="Half-Centuries"
               required
             />
           </div>
           <!-- ducks -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Ducks: </label>
+            <label class="text-lg" for="addDucks">Ducks: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formDucks"
               placeholder="Total Ducks"
               required
             />
           </div>
           <!-- 4s -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Fours: </label>
+            <label class="text-lg" for="addFours">Fours: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formFours"
               placeholder="Total Fours"
               required
             />
           </div>
           <!-- 6s -->
           <div class="m-2 flex justify-between w-75">
-            <label class="text-lg" for="player">Sixes: </label>
+            <label class="text-lg" for="addSixes">Sixes: </label>
             <input
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
-              id="player"
+              id="formSixes"
               placeholder="Total Sixes"
               required
             />
           </div>
           <button
+            type="button"
             class="bg-purple-600 dark:bg-purple-950 sm:mx-30 mx-5 mt-5 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
           >
             Cancel
           </button>
           <button
+            type="reset"
             class="bg-purple-600 dark:bg-purple-950 sm:mx-30 mx-5 mt-5 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
           >
             Reset
           </button>
           <button
+            type="submit"
             class="bg-amber-500 dark:bg-amber-600 sm:mx-30 mx-5 mt-5 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
           >
             Submit
           </button>
         </form>
+        <!-- modify form -->
       </section>
     </main>
   </body>
@@ -648,6 +547,6 @@
 
   <!-- Light/Dark Theme JS -->
   <script src="../js/theme.js"></script>
-  <script src="../js/sort.js"></script>
-  <script src="../js/crud.js"></script>
+  <!-- main js file -->
+  <script type="module" src="../js/main.js"></script>
 </html>
