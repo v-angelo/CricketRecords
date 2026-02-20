@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Records</title>
+    <title>Cricket Records</title>
     <!-- css -->
     <link rel="stylesheet" href="../css/style.css" />
     <!-- favicon -->
@@ -45,7 +45,7 @@
     <main>
       <!-- heading -->
       <h1 class="text-4xl md:text-5xl text-center font-bold my-5">
-        Test Records
+        <span id="headSpan">Test</span> Records
       </h1>
 
       <!-- batting section -->
@@ -377,6 +377,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addMatches">Matches: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formMatches"
@@ -388,6 +391,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addInnings">Innings: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formInnings"
@@ -399,6 +405,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addRuns">Runs: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formRuns"
@@ -410,6 +419,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addNO">Not Outs: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formNO"
@@ -421,6 +433,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addHS">Highest: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formHS"
@@ -432,6 +447,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addAvg">Average: </label>
             <input
+              type="number"
+              min="0"
+              step="0.01"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formAvg"
@@ -443,6 +461,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addBF">Balls Faced: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formBF"
@@ -454,6 +475,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addSR">Stike Rate: </label>
             <input
+              type="number"
+              min="0"
+              step="0.01"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formSR"
@@ -465,6 +489,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="add100">Centuries: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="form100"
@@ -476,6 +503,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="add50">Half-Cen: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="form50"
@@ -487,6 +517,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addDucks">Ducks: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formDucks"
@@ -498,6 +531,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addFours">Fours: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formFours"
@@ -509,6 +545,9 @@
           <div class="m-2 flex justify-between w-75">
             <label class="text-lg" for="addSixes">Sixes: </label>
             <input
+              type="number"
+              min="0"
+              step="1"
               class="border dark:border-white/40 border-black/15 rounded py-1 px-2"
               type="text"
               id="formSixes"
@@ -517,18 +556,21 @@
             />
           </div>
           <button
+            id="cancelButton"
             type="button"
             class="bg-purple-600 dark:bg-purple-950 sm:mx-30 mx-5 mt-5 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
           >
             Cancel
           </button>
           <button
+            id="resetButton"
             type="reset"
             class="bg-purple-600 dark:bg-purple-950 sm:mx-30 mx-5 mt-5 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
           >
             Reset
           </button>
           <button
+            id="submitButton"
             type="submit"
             class="bg-amber-500 dark:bg-amber-600 sm:mx-30 mx-5 mt-5 py-2 px-4 rounded-lg w-25 font-semibold cursor-pointer hover:opacity-85 active:ring-2"
           >
@@ -547,6 +589,7 @@
 
   <!-- Light/Dark Theme JS -->
   <script src="../js/theme.js"></script>
+
   <!-- main js file -->
   <script type="module" src="../js/main.js"></script>
 </html>

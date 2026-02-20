@@ -1,4 +1,4 @@
-export const testBatPlayers = [
+export const testBatData = [
   {
     player: "Sachin Tendulkar",
     nat: "IND",
@@ -449,4 +449,60 @@ export const testBatPlayers = [
     fours: 1024,
     sixes: 64
   }
+];
+
+export const odiBatData = [
+  { player: "Sachin Tendulkar", nat: "IND", career: "1989-2012", mat: 463, inns: 452, runs: 18426, no: 41, hs: 200, ave: 44.83, bf: 21368, sr: 86.23, hundreds: 49, fifties: 96, ducks: 20, fours: 2016, sixes: 195 },
+  { player: "Virat Kohli", nat: "IND", career: "2008-2026", mat: 311, inns: 299, runs: 14797, no: 47, hs: 183, ave: 58.71, bf: 15771, sr: 93.82, hundreds: 54, fifties: 77, ducks: 18, fours: 1376, sixes: 168 },
+  { player: "KC Sangakkara", nat: "SL", career: "2000-2015", mat: 404, inns: 380, runs: 14234, no: 41, hs: 169, ave: 41.98, bf: 18048, sr: 78.86, hundreds: 25, fifties: 93, ducks: 15, fours: 1385, sixes: 88 },
+  { player: "Ricky Ponting", nat: "AUS", career: "1995-2012", mat: 375, inns: 365, runs: 13704, no: 39, hs: 164, ave: 42.03, bf: 17046, sr: 80.39, hundreds: 30, fifties: 82, ducks: 20, fours: 1231, sixes: 162 },
+  { player: "ST Jayasuriya", nat: "SL", career: "1989-2011", mat: 445, inns: 433, runs: 13430, no: 18, hs: 189, ave: 32.36, bf: 14725, sr: 91.20, hundreds: 28, fifties: 68, ducks: 34, fours: 1500, sixes: 270 },
+  { player: "DPMD Jayawardene", nat: "SL", career: "1998-2015", mat: 448, inns: 418, runs: 12650, no: 39, hs: 144, ave: 33.37, bf: 16020, sr: 78.96, hundreds: 19, fifties: 77, ducks: 28, fours: 1119, sixes: 76 },
+  { player: "Inzamam-ul-Haq", nat: "PAK", career: "1991-2007", mat: 378, inns: 350, runs: 11739, no: 53, hs: 137, ave: 39.52, bf: 15812, sr: 74.24, hundreds: 10, fifties: 83, ducks: 20, fours: 971, sixes: 144 },
+  { player: "Jaques Kallis", nat: "SA", career: "1996-2014", mat: 328, inns: 314, runs: 11579, no: 53, hs: 139, ave: 44.36, bf: 15885, sr: 72.89, hundreds: 17, fifties: 86, ducks: 17, fours: 911, sixes: 137 },
+  { player: "Rohit Sharma", nat: "IND", career: "2007-2026", mat: 282, inns: 274, runs: 11577, no: 37, hs: 264, ave: 48.84, bf: 12482, sr: 92.74, hundreds: 33, fifties: 61, ducks: 16, fours: 1090, sixes: 357 },
+  { player: "Sourav Ganguly", nat: "IND", career: "1992-2007", mat: 311, inns: 300, runs: 11363, no: 23, hs: 183, ave: 41.02, bf: 15416, sr: 73.70, hundreds: 22, fifties: 72, ducks: 16, fours: 1122, sixes: 190 },
+  { player: "Rahul Dravid", nat: "IND", career: "1996-2011", mat: 344, inns: 318, runs: 10889, no: 40, hs: 153, ave: 39.16, bf: 15285, sr: 71.23, hundreds: 12, fifties: 83, ducks: 13, fours: 950, sixes: 42 },
+  { player: "MS Dhoni", nat: "IND", career: "2004-2019", mat: 350, inns: 297, runs: 10773, no: 84, hs: 183, ave: 50.57, bf: 12303, sr: 87.56, hundreds: 10, fifties: 73, ducks: 10, fours: 826, sixes: 229 },
+  { player: "CH Gayle", nat: "WI", career: "1999-2019", mat: 301, inns: 294, runs: 10480, no: 17, hs: 215, ave: 37.83, bf: 12019, sr: 87.19, hundreds: 25, fifties: 54, ducks: 25, fours: 1128, sixes: 331 },
+  { player: "Brian Lara", nat: "WI", career: "1990-2007", mat: 299, inns: 289, runs: 10405, no: 32, hs: 169, ave: 40.48, bf: 13086, sr: 79.51, hundreds: 19, fifties: 63, ducks: 16, fours: 1042, sixes: 133 },
+  { player: "TM Dilshan", nat: "SL", career: "1999-2016", mat: 330, inns: 303, runs: 10290, no: 41, hs: 161, ave: 39.27, bf: 11933, sr: 86.23, hundreds: 22, fifties: 47, ducks: 11, fours: 1111, sixes: 55 },
+  { player: "Mohammad Yousuf", nat: "PAK", career: "1998-2010", mat: 288, inns: 273, runs: 9720, no: 40, hs: 141, ave: 41.71, bf: 12942, sr: 75.10, hundreds: 15, fifties: 64, ducks: 15, fours: 785, sixes: 90 },
+  { player: "AC Gilchrist", nat: "AUS", career: "1996-2008", mat: 287, inns: 279, runs: 9619, no: 11, hs: 172, ave: 35.89, bf: 9922, sr: 96.94, hundreds: 16, fifties: 55, ducks: 19, fours: 1162, sixes: 149 },
+  { player: "AB de Villiers", nat: "SA", career: "2005-2018", mat: 228, inns: 218, runs: 9577, no: 39, hs: 176, ave: 53.50, bf: 9473, sr: 101.09, hundreds: 25, fifties: 53, ducks: 7, fours: 840, sixes: 204 },
+  { player: "M Azharuddin", nat: "IND", career: "1985-2000", mat: 334, inns: 308, runs: 9378, no: 54, hs: 153, ave: 36.92, bf: 12669, sr: 74.02, hundreds: 7, fifties: 58, ducks: 9, fours: 622, sixes: 77 },
+  { player: "PA de Silva", nat: "SL", career: "1984-2003", mat: 308, inns: 296, runs: 9284, no: 30, hs: 145, ave: 34.90, bf: 11443, sr: 81.13, hundreds: 11, fifties: 64, ducks: 17, fours: 712, sixes: 102 },
+  { player: "Saeed Anwar", nat: "PAK", career: "1989-2003", mat: 247, inns: 244, runs: 8824, no: 19, hs: 194, ave: 39.21, bf: 10938, sr: 80.67, hundreds: 20, fifties: 43, ducks: 15, fours: 938, sixes: 97 },
+  { player: "S Chanderpaul", nat: "WI", career: "1994-2011", mat: 268, inns: 251, runs: 8778, no: 50, hs: 150, ave: 41.60, bf: 12408, sr: 70.74, hundreds: 11, fifties: 59, ducks: 6, fours: 722, sixes: 85 },
+  { player: "Yuvraj Singh", nat: "IND", career: "2000-2017", mat: 304, inns: 278, runs: 8701, no: 40, hs: 150, ave: 36.55, bf: 9924, sr: 87.67, hundreds: 14, fifties: 52, ducks: 18, fours: 908, sixes: 155 },
+  { player: "DL Haynes", nat: "WI", career: "1978-1994", mat: 238, inns: 237, runs: 8648, no: 28, hs: 152, ave: 41.37, bf: 13707, sr: 63.09, hundreds: 17, fifties: 57, ducks: 13, fours: 768, sixes: 53 },
+  { player: "LRPL Taylor", nat: "NZ", career: "2006-2022", mat: 236, inns: 220, runs: 8607, no: 39, hs: 181, ave: 47.55, bf: 10330, sr: 83.32, hundreds: 21, fifties: 51, ducks: 9, fours: 713, sixes: 147 }
+];
+
+export const t20BatData = [
+  { player: "Babar Azam", nat: "PAK", career: "2016-2026", mat: 143, inns: 135, runs: 4571, no: 18, hs: 122, ave: 39.06, bf: 3566, sr: 128.18, hundreds: 3, fifties: 39, ducks: 10, fours: 475, sixes: 80 },
+  { player: "Rohit Sharma", nat: "IND", career: "2007-2024", mat: 159, inns: 151, runs: 4231, no: 19, hs: 121, ave: 32.05, bf: 3003, sr: 140.89, hundreds: 5, fifties: 32, ducks: 12, fours: 383, sixes: 205 },
+  { player: "Virat Kohli", nat: "IND", career: "2010-2024", mat: 125, inns: 117, runs: 4188, no: 31, hs: 122, ave: 48.69, bf: 3056, sr: 137.04, hundreds: 1, fifties: 38, ducks: 7, fours: 369, sixes: 124 },
+  { player: "JC Buttler", nat: "ENG", career: "2011-2026", mat: 151, inns: 139, runs: 4003, no: 23, hs: 101, ave: 34.50, bf: 2696, sr: 148.47, hundreds: 1, fifties: 28, ducks: 9, fours: 369, sixes: 174 },
+  { player: "PR Stirling", nat: "IRE", career: "2009-2026", mat: 163, inns: 160, runs: 3895, no: 12, hs: 115, ave: 26.31, bf: 2899, sr: 134.35, hundreds: 1, fifties: 24, ducks: 14, fours: 449, sixes: 141 },
+  { player: "MJ Guptill", nat: "NZ", career: "2009-2022", mat: 122, inns: 118, runs: 3531, no: 7, hs: 105, ave: 31.81, bf: 2602, sr: 135.70, hundreds: 2, fifties: 20, ducks: 3, fours: 309, sixes: 173 },
+  { player: "Mohammad Rizwan", nat: "PAK", career: "2015-2024", mat: 106, inns: 93, runs: 3414, no: 21, hs: 104, ave: 47.41, bf: 2723, sr: 125.37, hundreds: 1, fifties: 30, ducks: 5, fours: 285, sixes: 95 },
+  { player: "Muhammad Waseem", nat: "UAE", career: "2021-2026", mat: 97, inns: 97, runs: 3338, no: 6, hs: 112, ave: 36.68, bf: 2217, sr: 150.56, hundreds: 3, fifties: 26, ducks: 6, fours: 279, sixes: 193 },
+  { player: "DA Warner", nat: "AUS", career: "2009-2024", mat: 110, inns: 110, runs: 3277, no: 12, hs: 100, ave: 33.43, bf: 2300, sr: 142.47, hundreds: 1, fifties: 28, ducks: 6, fours: 337, sixes: 122 },
+  { player: "SA Yadav", nat: "IND", career: "2021-2026", mat: 108, inns: 102, runs: 3192, no: 17, hs: 117, ave: 37.55, bf: 1950, sr: 163.69, hundreds: 4, fifties: 25, ducks: 6, fours: 291, sixes: 175 },
+  { player: "Virandeep Singh", nat: "MAS", career: "2019-2025", mat: 111, inns: 104, runs: 3180, no: 20, hs: 116, ave: 37.85, bf: 2497, sr: 127.35, hundreds: 1, fifties: 23, ducks: 6, fours: 272, sixes: 131 },
+  { player: "AJ Finch", nat: "AUS", career: "2011-2022", mat: 103, inns: 103, runs: 3120, no: 12, hs: 172, ave: 34.28, bf: 2189, sr: 142.53, hundreds: 2, fifties: 19, ducks: 8, fours: 309, sixes: 125 },
+  { player: "Q de Kock", nat: "SA", career: "2012-2026", mat: 106, inns: 105, runs: 3032, no: 9, hs: 115, ave: 31.58, bf: 2135, sr: 142.01, hundreds: 2, fifties: 19, ducks: 9, fours: 307, sixes: 128 },
+  { player: "Sikandar Raza", nat: "ZIM", career: "2013-2026", mat: 130, inns: 125, runs: 2958, no: 12, hs: 133, ave: 26.17, bf: 2172, sr: 136.18, hundreds: 1, fifties: 16, ducks: 9, fours: 227, sixes: 138 },
+  { player: "GJ Maxwell", nat: "AUS", career: "2012-2026", mat: 129, inns: 118, runs: 2897, no: 18, hs: 145, ave: 28.97, bf: 1876, sr: 154.42, hundreds: 5, fifties: 12, ducks: 5, fours: 243, sixes: 150 },
+  { player: "Syed Aziz", nat: "MAS", career: "2019-2025", mat: 117, inns: 111, runs: 2782, no: 18, hs: 126, ave: 29.91, bf: 1971, sr: 141.14, hundreds: 1, fifties: 19, ducks: 8, fours: 248, sixes: 143 },
+  { player: "DA Miller", nat: "SA", career: "2010-2026", mat: 136, inns: 120, runs: 2713, no: 40, hs: 106, ave: 33.91, bf: 1926, sr: 140.86, hundreds: 2, fifties: 8, ducks: 3, fours: 175, sixes: 136 },
+  { player: "Litton Das", nat: "BAN", career: "2015-2025", mat: 120, inns: 118, runs: 2655, no: 5, hs: 83, ave: 23.49, bf: 2099, sr: 126.48, hundreds: 0, fifties: 16, ducks: 6, fours: 258, sixes: 81 },
+  { player: "P Nissanka", nat: "SL", career: "2021-2026", mat: 88, inns: 87, runs: 2636, no: 5, hs: 107, ave: 32.14, bf: 2042, sr: 129.08, hundreds: 2, fifties: 19, ducks: 7, fours: 268, sixes: 76 },
+  { player: "BKG Mendis", nat: "SL", career: "2016-2026", mat: 104, inns: 104, runs: 2607, no: 6, hs: 86, ave: 26.60, bf: 1996, sr: 130.61, hundreds: 0, fifties: 20, ducks: 8, fours: 234, sixes: 97 },
+  { player: "KS Williamson", nat: "NZ", career: "2011-2024", mat: 93, inns: 90, runs: 2575, no: 13, hs: 95, ave: 33.44, bf: 2092, sr: 123.08, hundreds: 0, fifties: 18, ducks: 4, fours: 245, sixes: 58 },
+  { player: "Shakib Al Hasan", nat: "BAN", career: "2006-2024", mat: 129, inns: 127, runs: 2551, no: 17, hs: 84, ave: 23.19, bf: 2105, sr: 121.18, hundreds: 0, fifties: 13, ducks: 9, fours: 258, sixes: 53 },
+  { player: "Mohammad Hafeez", nat: "PAK", career: "2006-2021", mat: 119, inns: 108, runs: 2514, no: 13, hs: 99, ave: 26.46, bf: 2060, sr: 122.03, hundreds: 0, fifties: 14, ducks: 7, fours: 251, sixes: 76 },
+  { player: "RR Hendricks", nat: "SA", career: "2014-2025", mat: 90, inns: 89, runs: 2504, no: 2, hs: 117, ave: 28.78, bf: 1938, sr: 129.20, hundreds: 1, fifties: 18, ducks: 7, fours: 268, sixes: 70 },
+  { player: "EJG Morgan", nat: "ENG", career: "2009-2022", mat: 115, inns: 107, runs: 2458, no: 21, hs: 91, ave: 28.58, bf: 1805, sr: 136.17, hundreds: 0, fifties: 14, ducks: 3, fours: 186, sixes: 120 }
 ];

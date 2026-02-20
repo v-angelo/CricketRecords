@@ -1,110 +1,58 @@
-import { testBatPlayers } from "./data.js";
+import { testBatData, odiBatData, t20BatData } from "./data.js";
+import makeSortableTable from "./sortTable.js";
 
-function makeSortableTable(tableSelector, data) {
-    const table = document.querySelector(tableSelector);
-    const tbody = table.querySelector("tbody");
-    const headers = table.querySelectorAll("thead th");
+let dataArray;
+let storedBatData;
 
-    let workingData = [...data];
-    let currentSort = { key: null, ascending: true };
+// re-direct resolve and initialization
+const params = new URLSearchParams(window.location.search);
+const type = params.get("type");
+headSpan.textContent = type;
 
-    // function to get column keys from the <th> elements
-    function getColumnKeys() {
-        return Array.from(headers).map(th => th.dataset.key || null);
+if (type == "ODI") {
+    dataArray = [...odiBatData];
+    let odiData = JSON.parse(sessionStorage.getItem("odiData"));
+    if (!odiData) {
+        sessionStorage.setItem("odiData", JSON.stringify(dataArray));
+        odiData = JSON.parse(sessionStorage.getItem("odiData"));
     }
-
-    // function to create table rows
-    function render() {
-        tbody.innerHTML = "";
-
-        const columnKeys = getColumnKeys();
-
-        workingData.forEach((item, rowIndex) => {
-            const row = document.createElement("tr");
-
-            row.className = "border-t dark:border-white/15 border-black/15 cursor-pointer hover:bg-amber-400 active:bg-amber-600";
-
-            columnKeys.forEach((key, colIndex) => {
-                const cell = document.createElement("td");
-
-                if (!key) { // index column
-                    cell.textContent = rowIndex + 1;
-                } else {
-                    cell.textContent = item[key] ?? ""; // Nullish Coalescing Operator: ??
-                }
-
-                if (currentSort.key === key) {
-                    cell.classList.add("font-bold");
-                }
-
-                row.appendChild(cell);
-            });
-
-            tbody.appendChild(row);
-        });
+    storedBatData = [...odiData];
+    sessionStorage.setItem("storedBatData", JSON.stringify(storedBatData));
+} else if (type == "T20") {
+    dataArray = [...t20BatData];
+    let t20Data = JSON.parse(sessionStorage.getItem("t20Data"));
+    if (!t20Data) {
+        sessionStorage.setItem("t20Data", JSON.stringify(dataArray));
+        t20Data = JSON.parse(sessionStorage.getItem("t20Data"));
     }
-
-    // sort function
-    function sortBy(columnIndex) {
-        const columnKeys = getColumnKeys();
-        const key = columnKeys[columnIndex];
-
-        if (!key) return; // ignore index column
-
-        if (currentSort.key === key) {
-            currentSort.ascending = !currentSort.ascending;
-        } else {
-            currentSort.key = key;
-            currentSort.ascending = true;
-        }
-
-        workingData.sort((a, b) => {
-            const valA = a[key];
-            const valB = b[key];
-
-            const numA = parseFloat(valA);
-            const numB = parseFloat(valB);
-
-            if (!isNaN(numA) && !isNaN(numB)) {
-                return currentSort.ascending
-                    ? numA - numB
-                    : numB - numA;
-            }
-
-            return currentSort.ascending
-                ? String(valA).localeCompare(String(valB))
-                : String(valB).localeCompare(String(valA));
-        });
-
-        updateIcons(columnIndex);
-        render();
+    storedBatData = [...t20Data];
+    sessionStorage.setItem("storedBatData", JSON.stringify(storedBatData));
+} else {
+    dataArray = [...testBatData];
+    let testData = JSON.parse(sessionStorage.getItem("testData"));
+    if (!testData) {
+        sessionStorage.setItem("testData", JSON.stringify(dataArray));
+        testData = JSON.parse(sessionStorage.getItem("testData"));
     }
-
-    // function to update sorting icons when th is clicked
-    function updateIcons(activeIndex) {
-        headers.forEach(th => {
-            const btn = th.querySelector("button");
-            if (btn) btn.textContent = btn.textContent.replace(/▲|▼/g, "");
-        });
-
-        const activeHeader = headers[activeIndex];
-        const button = activeHeader.querySelector("button");
-
-        if (button) {
-            button.textContent += currentSort.ascending ? " ▲" : " ▼";
-        }
-    }
-
-    // Attach click listeners
-    headers.forEach((th, index) => {
-        const button = th.querySelector("button");
-        if (!button) return;
-
-        button.addEventListener("click", () => sortBy(index));
-    });
-
-    render();
+    storedBatData = [...testData];
+    sessionStorage.setItem("storedBatData", JSON.stringify(storedBatData));
 }
+
+// function to save to storage and create new table
+function saveAndRender() {
+    sessionStorage.setItem("storedBatData", JSON.stringify(storedBatData));
+    makeSortableTable("#testBattingTable", storedBatData);
+    if (type == "ODI") {
+        sessionStorage.setItem("odiData", JSON.stringify(storedBatData));
+    } else if (type == "T20") {
+        sessionStorage.setItem("t20Data", JSON.stringify(storedBatData));
+    } else {
+        sessionStorage.setItem("testData", JSON.stringify(storedBatData));
+    }
+}
+
+// initial table creation
+saveAndRender();
 
 // select table row
 const batTable = document.querySelector("#testBattingTable");
@@ -117,6 +65,7 @@ batTable.addEventListener("click", function (e) {
     document.querySelectorAll("#testBattingTable tr").forEach(r => r.classList.remove("selected"));
     row.classList.add("selected");
 });
+
 // de-select table row if clicked outside table
 document.addEventListener("click", function (e) {
     const check = (!batTable.contains(e.target)) && (!modifyButton.contains(e.target)) && (!deleteButton.contains(e.target));
@@ -125,38 +74,54 @@ document.addEventListener("click", function (e) {
     }
 });
 
-let testBatData = [...testBatPlayers];
-let storedBatData = JSON.parse(sessionStorage.getItem("storedBatData"));
+// add/modify variable initialization
+const batForm = document.querySelector("#batForm");
 let modifyPlayer = null;
 
-if(!storedBatData) {
-    sessionStorage.setItem("storedBatData", JSON.stringify(testBatData));
-}
-
-// initial table creation
-makeSortableTable("#testBattingTable", storedBatData);
-
-// saving to storage
-function saveToStorage() {
-    sessionStorage.setItem("storedBatData", JSON.stringify(storedBatData));
-}
-
-// Add button
-const addButton = document.querySelector("#addButton");
-const batForm = document.querySelector("#batForm");
-
+// add button
 addButton.addEventListener("click", () => {
     if (batForm.classList.contains("hidden")) {
         batForm.classList.remove("hidden");
         batForm.classList.add("flex");
-    } else if (batForm.classList.contains("flex")) {
+    }
+    modifyPlayer = null;
+});
+
+// delete button
+deleteButton.addEventListener("click", () => {
+    const tableRows = Array.from(batTable.querySelectorAll("tr"));
+    const rowSelect = tableRows.some(row => row.classList.contains("selected"));
+    if (rowSelect) {
+        const row = tableRows.find(row => row.classList.contains("selected"));
+        const rowData = Array.from(row.cells).map(cell => cell.textContent.trim());
+        console.log(rowData[1]);
+        storedBatData = storedBatData.filter(obj => obj.player != rowData[1]);
+    } else {
+        alert("Select player data to delete!!");
+    }
+
+    if (batForm.classList.contains("flex")) {
         batForm.classList.remove("flex");
         batForm.classList.add("hidden");
     }
     modifyPlayer = null;
+    saveAndRender();
+});
+
+// reset button
+resetButton.addEventListener("click", () => {
+    modifyPlayer = null;
     batForm.reset();
 });
 
+// cancel button
+cancelButton.addEventListener("click", () => {
+    if (batForm.classList.contains("flex")) {
+        batForm.classList.remove("flex");
+        batForm.classList.add("hidden");
+    }
+    modifyPlayer = null;
+});
 
 // modify button
 modifyButton.addEventListener("click", () => {
@@ -192,9 +157,11 @@ modifyButton.addEventListener("click", () => {
 
     } else {
         alert("Select player data to modify!!");
+        modifyPlayer = null;
     }
 });
 
+// submit form algorithm
 batForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -243,7 +210,6 @@ batForm.addEventListener("submit", (e) => {
         storedBatData.push(newEntry);
         console.log(storedBatData);
     }
-    saveToStorage();
-    makeSortableTable("#testBattingTable", storedBatData);
+    saveAndRender();
     batForm.reset();
 });
